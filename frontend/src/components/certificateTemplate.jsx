@@ -27,7 +27,7 @@ const CertificateTemplate = ({ name, course, date,  }) => {
   const rightUpper1 = {
     width: 125,
     height: 125,
-    backgroundColor: "green",
+    backgroundColor: "#039754",
     borderRadius: "3px",
     position: "absolute",
     top: -15,
@@ -36,7 +36,7 @@ const CertificateTemplate = ({ name, course, date,  }) => {
   const rightUpper2 = {
     width: 100,
     height: 100,
-    backgroundColor: "blue",
+    backgroundColor: " #0367ED",
     borderRadius: "3px",
     position: "absolute",
     top: -20,
@@ -45,7 +45,7 @@ const CertificateTemplate = ({ name, course, date,  }) => {
   const leftLower1 = {
     width: 125,
     height: 125,
-    backgroundColor: "green",
+    backgroundColor: "#039754",
     borderRadius: "3px",
     position: "absolute",
     bottom: -10,
@@ -54,7 +54,7 @@ const CertificateTemplate = ({ name, course, date,  }) => {
   const leftLower2 = {
     width: 100,
     height: 100,
-    backgroundColor: "blue",
+    backgroundColor: " #0367ED",
     borderRadius: "3px",
     position: "absolute",
     bottom: -25,
@@ -95,7 +95,7 @@ const CertificateTemplate = ({ name, course, date,  }) => {
             ml: -17,
             width: 200,
             height: 200,
-            backgroundColor: "blue",
+            backgroundColor: " #0367ED",
             borderRadius: "50%",
             zIndex: 0,
             position: "absolute",
@@ -311,7 +311,7 @@ const CertificateTemplate = ({ name, course, date,  }) => {
             mr: -9,
             width: 200,
             height: 200,
-            backgroundColor: "blue",
+            backgroundColor: " #0367ED",
             borderRadius: "50%",
             zIndex: 0,
             position: "absolute",

@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import CertificateTemplate from './certificateTemplate';
 import './certificate.css';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import academy from '../assets/academy.svg'
 const Form = () => {
   const [name, setName] = useState("");
   const [course, setCourse] = useState("");
   const [date, setDate] = useState("");
   const [email, setEmail] = useState("");
   const [pdfPath, setPdfPath] = useState("");
-  const [isGenerating, setIsGenerating] = useState(false);  // Separate loading state for "Generate Certificate"
-  const [isBulkUploading, setIsBulkUploading] = useState(false);  // Separate loading state for "Bulk Upload"
+  const [isGenerating, setIsGenerating] = useState(false); 
+  const [isBulkUploading, setIsBulkUploading] = useState(false); 
   const [isEmailSending, setIsEmailSending]=useState(false)
   const [showCertificate,setShowCertificate] = useState(false);
   const [errors, setErrors] = useState({});
@@ -52,19 +54,19 @@ const Form = () => {
       });
   
       const data = await response.json();
-      console.log('Generated Certificate Response:', data); // Debugging log
+      console.log('Generated Certificate Response:', data); 
   
       if (data.message === 'Certificate generated successfully!' && data.pdfPath) {
         setPdfPath(data.pdfPath);
         setShowCertificate(true);
         console.log('PDF Path Set:', data.pdfPath); 
-        alert('Certificate generated!');
+        toast.success('Certificate generated successfully!');
       } else {
-        alert('Failed to generate certificate.');
+        toast.error('Failed to generate certificate.');
       }
     } catch (error) {
       console.error('Error generating certificate:', error);
-      alert('Error generating the certificate.');
+      toast.error('Error generating the certificate.');
     } finally {
       setIsGenerating(false); 
     }
@@ -102,13 +104,13 @@ const Form = () => {
   
       if (data.message === 'Certificate sent successfully!') {
         setIsEmailSending(true);
-        alert('Certificate sent successfully!');
+        toast.success('Certificate sent successfully!');
       } else {
-        alert('Failed to send certificate.');
+        toast.error('Failed to send certificate.');
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      alert('Error sending certificate.');
+      toast.error('Error sending certificate.');
     } finally {
       setIsEmailSending(false);
     }
@@ -141,10 +143,10 @@ const Form = () => {
   
       const result = await response.json();
       console.log("Response:", result);
-      alert(result.message);
+      toast.success(result.message);
     } catch (error) {
       console.error("Error uploading file:", error);
-      alert("File upload failed!");
+      toast.error("File upload failed!");
     } finally {
       setIsBulkUploading(false);
     }
@@ -152,9 +154,12 @@ const Form = () => {
   
   return (
     <div className={`form-certificate-container ${showCertificate ? 'show-certificate' : ''}`}>
-      
+      <ToastContainer />
       <form onSubmit={handleGenerate} className="certificate-form">
+        <div style={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
         <h2>Enter Certificate Details</h2>
+        <img src={academy} alt='academy_logo' style={{width:'80px',height:'75px',marginTop:'-10px',padding:'10px'}}></img>
+        </div>
         <label>Name:</label>
         <input
           type="text"

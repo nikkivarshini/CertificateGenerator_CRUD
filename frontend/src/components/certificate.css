@@ -11,7 +11,7 @@
   
   /* Form Styling */
   .certificate-form {
-    width: 400px;
+    width: 450px;
     height: auto; /* Height will be adjusted automatically */
     min-height: 350px; /* Set a minimum height */
     padding: 20px;
@@ -35,7 +35,8 @@
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: rgb(97, 94, 94);
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+    font-size: 31px;
   }
   
   /* Input Styling */
