@@ -1,0 +1,154 @@
+/* Container for form and certificate display */
+.form-certificate-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Space between form and certificate */
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  /* Form Styling */
+  .certificate-form {
+    width: 400px;
+    height: auto; /* Height will be adjusted automatically */
+    min-height: 350px; /* Set a minimum height */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(17, 12, 12, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease; /* Animation for moving form */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* When the certificate is generated, shift the form slightly to the left */
+  .show-certificate .certificate-form {
+    transform: translateX(-20px); /* Shift form slightly to the left */
+  }
+  
+  /* Title Styling */
+  .certificate-form h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(97, 94, 94);
+    margin-bottom: 20px;
+  }
+  
+  /* Input Styling */
+  .certificate-form label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: rgb(97, 94, 94);
+  }
+  
+  .certificate-form input {
+    width: 100%;
+    padding: 12px; /* Increase padding for better spacing */
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    height: 44px; /* Ensures the input height matches the button */
+  }
+  
+  /* Submit Button Styling */
+  .certificate-form button {
+    align-items: center;
+    width: 100%;
+    padding: 12px;  /* Matches the padding of the input fields */
+    background: #0367ED;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    height: 44px; /* Matches the input field height */
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .certificate-form button:hover {
+    background: darkgreen;
+  }
+  
+  /* Error Messages */
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Certificate Styling */
+  .certificate-display {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(17, 12, 12, 0.1);
+    margin: 0;
+    min-width: 600px; /* Minimum width of the certificate */
+    height: 350px; /* Set the same height as the form */
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  /* When the certificate is generated, make it visible and adjust size */
+  .show-certificate .certificate-display {
+    display: block;
+    opacity: 1;
+    width: 1100px; /* Increase the width */
+    height: 800px; 
+    /* Keep the height the same as the form */
+  }
+  
+  /* Button styles for the certificate display */
+  .certificate-display button {
+    align-content: center;
+    width: 30%;
+    padding: 12px;
+    background: #0367ED;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    height: 44px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .certificate-display button:hover {
+    background: darkblue;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 480px) {
+    .certificate-form {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .certificate-form button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .certificate-display {
+      width: 90%;
+      height: auto;
+    }
+  }
+  
