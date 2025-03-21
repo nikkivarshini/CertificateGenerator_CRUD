@@ -343,7 +343,7 @@ exports.generatePDF = async (name, course, date) => {
               style="
                 height: 200px;
                 width: 200px;
-                background-color: blue;
+                background-color: #0367ED;
                 bottom: -60px;
                 right: -60px;
                 position: absolute;
