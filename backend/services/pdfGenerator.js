@@ -138,7 +138,7 @@ exports.generatePDF = async (name, course, date) => {
             .bottom-left1-60 {
               width: 125px;
               height: 125px;
-              background-color: green;
+              background-color: #039754;
               border-radius: 5px;
               position: absolute;
               bottom: -75px;
@@ -160,7 +160,7 @@ exports.generatePDF = async (name, course, date) => {
             .bottom-left2-60 {
               width: 100px;
               height: 100px;
-              background-color: blue;
+              background-color:  #0367ED;
               border-radius: 5px;
               position: absolute;
               bottom: -90px;
@@ -182,7 +182,7 @@ exports.generatePDF = async (name, course, date) => {
             .top-right1-60 {
               width: 125px;
               height: 125px;
-              background-color: green;
+              background-color: #039754;
               border-radius: 5px;
               position: absolute;
               top: -90px;
@@ -204,7 +204,7 @@ exports.generatePDF = async (name, course, date) => {
             .top-right2-60 {
               width: 100px;
               height: 100px;
-              background-color: blue;
+              background-color:  #0367ED;
               border-radius: 5px;
               position: absolute;
               top: -100px;
@@ -269,7 +269,7 @@ exports.generatePDF = async (name, course, date) => {
               style="
                 height: 200px;
                 width: 200px;
-                background-color: blue;
+                background-color:  #0367ED;
                 top: -60px;
                 left: -60px;
                 position: absolute;
